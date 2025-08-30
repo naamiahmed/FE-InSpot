@@ -268,7 +268,7 @@ export default function ClubPage({ clubId = "club-001" }: ClubPageProps) {
                 className="glass-card p-6 rounded-2xl"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800">Today's Bookings</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">Today Bookings</h3>
                   <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
                     <Filter className="w-4 h-4" />
                     <span>Filter</span>

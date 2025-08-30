@@ -298,7 +298,7 @@ export default function Dashboard({ onLogout }: DashboardProps) {
           >
             <h3 className="text-2xl font-bold mb-2">Welcome back, {getUserDisplayName()}!</h3>
             <p className="text-blue-100">
-              Here's what's happening in your facility today. You have 3 new bookings and 2 alerts to review.
+              Here what happening in your facility today. You have 3 new bookings and 2 alerts to review.
             </p>
           </motion.div>
 

@@ -35,4 +35,33 @@ api.interceptors.response.use(
   }
 );
 
+// API Functions for Clubs
+export const clubAPI = {
+  getClubs: () => api.get('/clubs'),
+  addClub: (clubData: { name: string; location: string; manager_id: number }) => 
+    api.post('/clubs', clubData),
+};
+
+// API Functions for Slots
+export const slotAPI = {
+  getSlotsByClub: (clubId: number) => api.get(`/slots/${clubId}`),
+  addSlot: (slotData: { club_id: number; time: string; price: number }) => 
+    api.post('/slots', slotData),
+};
+
+// API Functions for Bookings
+export const bookingAPI = {
+  createBooking: (bookingData: { user_id: number; slot_id: number }) => 
+    api.post('/bookings', bookingData),
+  getUserBookings: (userId: number) => api.get(`/bookings/user/${userId}`),
+};
+
+// API Functions for Auth
+export const authAPI = {
+  register: (userData: { name: string; email: string; password: string }) => 
+    api.post('/auth/register', userData),
+  login: (credentials: { email: string; password: string }) => 
+    api.post('/auth/login', credentials),
+};
+
 export default api;
